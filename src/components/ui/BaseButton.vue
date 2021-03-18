@@ -1,5 +1,5 @@
 <template>
-  <button :class="buttonClasses" :disabled="disabled">
+  <button :class="buttonClasses" :disabled="disabled" ref="base-button">
     <slot></slot>
   </button>
 </template>
@@ -32,6 +32,11 @@ export default {
         "btn-block": this.block,
         [this.color]: true,
       };
+    },
+  },
+  methods: {
+    getBoundingClientRect() {
+      return this.$refs["base-button"].getBoundingClientRect();
     },
   },
 };
