@@ -10,6 +10,8 @@ import BaseCell from "../components/ui/BaseCell";
 import BaseCard from "../components/ui/BaseCard";
 import BaseIcon from "../components/ui/BaseIcon";
 import BaseModal from "../components/ui/BaseModal";
+import BasePopover from "../components/ui/BasePopover";
+import BaseSimpleList from "../components/ui/BaseSimpleList";
 
 const addComponents = (app) => {
   app.component("font-awesome-icon", FontAwesomeIcon);
@@ -24,6 +26,8 @@ const addComponents = (app) => {
   app.component("base-card", BaseCard);
   app.component("base-icon", BaseIcon);
   app.component("base-modal", BaseModal);
+  app.component("base-popover", BasePopover);
+  app.component("base-simple-list", BaseSimpleList);
 };
 
 export { addComponents };
