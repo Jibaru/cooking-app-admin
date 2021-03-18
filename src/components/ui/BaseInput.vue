@@ -5,9 +5,10 @@
 export default {
   props: {
     modelValue: {
-      type: String,
       required: false,
       default: null,
+      validator: (val) =>
+        val === null || typeof val === "string" || typeof val === "number",
     },
     type: {
       type: String,
