@@ -1,8 +1,23 @@
 <template>
-  <select>
+  <select :value="modelValue" @input="changeModelValue($event)">
     <slot></slot>
   </select>
 </template>
+<script>
+export default {
+  emits: ["update:modelValue"],
+  props: {
+    modelValue: {
+      type: String,
+    },
+  },
+  methods: {
+    changeModelValue(event) {
+      this.$emit("update:modelValue", event.target.value);
+    },
+  },
+};
+</script>
 <style lang="scss" scoped>
 select {
   @include low-shadow;
