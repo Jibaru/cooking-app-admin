@@ -1,8 +1,20 @@
 <template>
-  <input :type="type" :value="modelValue" @input="changeModelValue" />
+  <input
+    :type="type"
+    :value="modelValue"
+    @input="changeModelValue"
+    :bind="$attrs"
+    @blur="focusOut"
+  />
+  <div class="error" v-if="!isValid">
+    <slot name="error">
+      <span>El campo es inválido</span>
+    </slot>
+  </div>
 </template>
 <script>
 export default {
+  emits: ["update:modelValue", "blur"],
   props: {
     modelValue: {
       required: false,
@@ -15,11 +27,17 @@ export default {
       default: "text",
       required: false,
     },
+    isValid: {
+      type: Boolean,
+      default: true,
+    },
   },
-  emits: ["update:modelValue"],
   methods: {
     changeModelValue(event) {
       this.$emit("update:modelValue", event.target.value);
+    },
+    focusOut() {
+      this.$emit("blur");
     },
   },
 };
@@ -37,5 +55,11 @@ input {
     outline-color: $app-primary-color;
     outline-style: solid;
   }
+}
+
+.error {
+  color: $app-danger-color;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
 }
 </style>
