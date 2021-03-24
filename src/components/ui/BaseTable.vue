@@ -8,15 +8,6 @@
         <slot name="body"></slot>
       </tbody>
     </table>
-    <div class="pagination">
-      <div>
-        <button>Prev</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>Next</button>
-      </div>
-    </div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -32,16 +23,6 @@ table {
   thead {
     background-color: $app-primary-color;
     color: $app-secondary-font-color;
-  }
-}
-
-.pagination {
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-
-  div {
-    width: fit-content;
   }
 }
 </style>
