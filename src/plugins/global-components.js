@@ -12,6 +12,7 @@ import BaseIcon from "../components/ui/BaseIcon";
 import BaseModal from "../components/ui/BaseModal";
 import BasePopover from "../components/ui/BasePopover";
 import BaseSimpleList from "../components/ui/BaseSimpleList";
+import BasePagination from "../components/ui/BasePagination";
 
 const addComponents = (app) => {
   app.component("font-awesome-icon", FontAwesomeIcon);
@@ -28,6 +29,7 @@ const addComponents = (app) => {
   app.component("base-modal", BaseModal);
   app.component("base-popover", BasePopover);
   app.component("base-simple-list", BaseSimpleList);
+  app.component("base-pagination", BasePagination);
 };
 
 export { addComponents };
