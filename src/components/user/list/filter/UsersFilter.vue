@@ -57,7 +57,8 @@
           @click="togglePrefRecipesModal"
           @mouseenter="isOpenPrefRecipesPopover = true"
           @mouseleave="isOpenPrefRecipesPopover = false"
-          ref="pref-recipes-btn"
+          class="popover-target"
+          data-id="pref-recipes-btn"
           block
         >
           Pref. Recetas
@@ -78,7 +79,7 @@
           />
         </base-modal>
         <base-popover
-          target-ref="pref-recipes-btn"
+          target-data-id="pref-recipes-btn"
           :open="isOpenPrefRecipesPopover"
         >
           <base-simple-list :elements="prefRecipesList"></base-simple-list>
