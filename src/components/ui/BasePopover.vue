@@ -1,18 +1,22 @@
 <template>
-  <div class="popover" v-show="open" :style="popoverStyles">
-    <slot></slot>
-  </div>
+  <teleport to="body">
+    <div class="popover" v-show="open" :style="popoverStyles">
+      <slot></slot>
+    </div>
+  </teleport>
 </template>
 <script>
+const TARGET_CLASS_NAME = "popover-target";
+
 export default {
   props: {
-    targetRef: {
-      type: String,
-      required: true,
-    },
     open: {
       type: Boolean,
       default: false,
+    },
+    targetDataId: {
+      type: String,
+      required: true,
     },
   },
   data() {
@@ -31,16 +35,12 @@ export default {
   },
   methods: {
     getTargetElement() {
-      return this.$parent.$refs[this.targetRef];
+      return document.querySelector(
+        `.${TARGET_CLASS_NAME}[data-id="${this.targetDataId}"]`
+      );
     },
     existsTargetElement() {
-      return (
-        this.getTargetElement() &&
-        Object.prototype.hasOwnProperty.call(
-          this.getTargetElement(),
-          "getBoundingClientRect"
-        )
-      );
+      return this.getTargetElement();
     },
     setLocationFromTargetElement() {
       const targetElement = this.getTargetElement();
@@ -68,7 +68,9 @@ export default {
     window.addEventListener("resize", this.setLocationFromTargetElement);
   },
   mounted() {
-    this.setLocationFromTargetElement();
+    this.$nextTick(() => {
+      this.setLocationFromTargetElement();
+    });
   },
   unmounted() {
     window.removeEventListener("resize", this.setLocationFromTargetElement);
