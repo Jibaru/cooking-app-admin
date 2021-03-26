@@ -16,6 +16,12 @@ const addIcons = () => {
     FasIcons.faGlobeAmericas,
     FasIcons.faBook,
     FasIcons.faTags,
+    FasIcons.faEye,
+    FasIcons.faEdit,
+    FasIcons.faExchangeAlt,
+    FasIcons.faBan,
+    FasIcons.faKey,
+    FasIcons.faPaperPlane,
   ]);
 
   const selectedFarIcons = Array.from([FarIcons.faHeart]);
