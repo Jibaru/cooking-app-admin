@@ -13,6 +13,7 @@ import BaseModal from "../components/ui/BaseModal";
 import BasePopover from "../components/ui/BasePopover";
 import BaseSimpleList from "../components/ui/BaseSimpleList";
 import BasePagination from "../components/ui/BasePagination";
+import BaseTableActions from "../components/ui/BaseTableActions";
 
 const addComponents = (app) => {
   app.component("font-awesome-icon", FontAwesomeIcon);
@@ -30,6 +31,7 @@ const addComponents = (app) => {
   app.component("base-popover", BasePopover);
   app.component("base-simple-list", BaseSimpleList);
   app.component("base-pagination", BasePagination);
+  app.component("base-table-actions", BaseTableActions);
 };
 
 export { addComponents };
