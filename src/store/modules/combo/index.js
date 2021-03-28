@@ -16,7 +16,16 @@ export default {
           name: "Normal",
         },
       ],
-      userStates: [],
+      userStates: [
+        {
+          value: "ACTIVE",
+          name: "Activo",
+        },
+        {
+          value: "BANNED",
+          name: "Baneado",
+        },
+      ],
       ingredientStates: [],
       equipmentStates: [],
       recipeStates: [],
