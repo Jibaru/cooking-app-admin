@@ -22,6 +22,7 @@ const addIcons = () => {
     FasIcons.faBan,
     FasIcons.faKey,
     FasIcons.faPaperPlane,
+    FasIcons.faEllipsisH,
   ]);
 
   const selectedFarIcons = Array.from([FarIcons.faHeart]);
