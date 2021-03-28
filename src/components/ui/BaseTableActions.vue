@@ -1,11 +1,10 @@
 <template>
   <ul>
-    <li
-      v-for="action in actions"
-      :key="action.name"
-      @click="selectAction(action.name)"
-    >
-      <a href="#">
+    <li v-for="action in actions" :key="action.name">
+      <a
+        :href="action.key.toLowerCase()"
+        @click.prevent="selectAction(action.key)"
+      >
         <span>{{ action.name }}</span>
         <base-icon :icon="action.icon.name" :type="action.icon.type" />
       </a>
@@ -22,8 +21,8 @@ export default {
     },
   },
   methods: {
-    selectAction(actionName) {
-      this.$emit("selectAction", actionName);
+    selectAction(actionKey) {
+      this.$emit("selectAction", actionKey);
     },
   },
 };
