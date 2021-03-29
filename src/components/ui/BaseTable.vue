@@ -21,6 +21,7 @@ table {
   width: 100%;
 
   thead {
+    @include low-shadow;
     background-color: $app-primary-color;
     color: $app-secondary-font-color;
   }
