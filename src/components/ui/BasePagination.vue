@@ -117,7 +117,7 @@ export default {
     }
 
     .current-page {
-      background-color: red;
+      box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, 0.5);
     }
   }
 }
