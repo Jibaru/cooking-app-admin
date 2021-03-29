@@ -8,7 +8,7 @@ export default {
   emits: ["update:modelValue"],
   props: {
     modelValue: {
-      type: String,
+      type: [String, Number],
     },
   },
   methods: {
