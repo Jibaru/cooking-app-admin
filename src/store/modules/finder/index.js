@@ -13,6 +13,19 @@ export default {
           lastName: "Rueda",
         };
       }),
+      ingredients: [...Array(15).keys()].map((id) => {
+        return {
+          id: id,
+          name: "Ingredient " + id,
+        };
+      }),
+      // FIXME: Remove filteredIngredients when create services
+      filteredIngredients: [...Array(15).keys()].map((id) => {
+        return {
+          id: id,
+          name: "Ingredient " + id,
+        };
+      }),
     };
   },
   mutations,
