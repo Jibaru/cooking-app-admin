@@ -5,6 +5,7 @@
     @input="changeModelValue"
     :bind="$attrs"
     @blur="focusOut"
+    @focus="focusIn"
   />
   <div class="error" v-if="!isValid">
     <slot name="error">
@@ -14,7 +15,7 @@
 </template>
 <script>
 export default {
-  emits: ["update:modelValue", "blur"],
+  emits: ["update:modelValue", "blur", "focus"],
   props: {
     modelValue: {
       required: false,
@@ -36,8 +37,11 @@ export default {
     changeModelValue(event) {
       this.$emit("update:modelValue", event.target.value);
     },
-    focusOut() {
-      this.$emit("blur");
+    focusOut(event) {
+      this.$emit("blur", event);
+    },
+    focusIn(event) {
+      this.$emit("focus", event);
     },
   },
 };
