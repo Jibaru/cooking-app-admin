@@ -72,7 +72,7 @@
   <base-pagination
     :current-page="currentPage"
     :total-pages="totalPages"
-    @select-page="fetchPage"
+    @select-page="fetchUsers"
   />
   <base-modal
     title="Ver Usuario"
