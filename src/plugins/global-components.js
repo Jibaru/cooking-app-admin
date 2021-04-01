@@ -16,6 +16,7 @@ import BasePagination from "../components/ui/BasePagination";
 import BaseTableActions from "../components/ui/BaseTableActions";
 import BaseBadge from "../components/ui/BaseBadge";
 import BaseTextarea from "../components/ui/BaseTextarea";
+import BaseChip from "../components/ui/BaseChip";
 
 const addComponents = (app) => {
   app.component("font-awesome-icon", FontAwesomeIcon);
@@ -36,6 +37,7 @@ const addComponents = (app) => {
   app.component("base-table-actions", BaseTableActions);
   app.component("base-badge", BaseBadge);
   app.component("base-textarea", BaseTextarea);
+  app.component("base-chip", BaseChip);
 };
 
 export { addComponents };
