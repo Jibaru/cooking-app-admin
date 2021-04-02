@@ -144,7 +144,7 @@
   >
     <create-notification-form
       :receiver-user-id="selectedUser.id"
-      @submit="sendNotification"
+      @submit-create="sendNotification"
     />
   </base-modal>
 </template>

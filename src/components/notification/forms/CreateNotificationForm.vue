@@ -48,7 +48,7 @@ import { mapGetters } from "vuex";
 import Validators from "@/utils/validators";
 
 export default {
-  emits: ["submit"],
+  emits: ["submit-create"],
   props: {
     receiverUserId: {
       type: Number,
@@ -134,7 +134,7 @@ export default {
         return;
       }
 
-      this.$emit("submit", {
+      this.$emit("submit-create", {
         userId: this.userId.val,
         dateTimeSended: this.dateTimeSended.val,
         subject: this.subject.val,
