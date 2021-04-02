@@ -1,7 +1,7 @@
 <template>
-  <ul>
+  <ul :style="baseSimpleListStyles">
     <li v-for="element in elements" :key="element">
-      {{ element }}
+      <span v-if="prefix">{{ prefix }}</span> {{ element }}
     </li>
   </ul>
 </template>
@@ -12,11 +12,26 @@ export default {
       type: Array,
       required: true,
     },
+    maxHeight: {
+      type: String,
+      required: false,
+    },
+    prefix: {
+      type: String,
+      required: false,
+    },
+  },
+  computed: {
+    baseSimpleListStyles() {
+      return {
+        "max-height": this.maxHeight,
+      };
+    },
   },
 };
 </script>
 <style lang="scss" scoped>
 ul {
-  list-style: none;
+  overflow: auto;
 }
 </style>
