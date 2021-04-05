@@ -93,7 +93,6 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-
 import PrefRecipes from "./PrefsRecipes";
 
 export default {
