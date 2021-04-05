@@ -13,6 +13,14 @@ export default {
           lastName: "Rueda",
         };
       }),
+      // FIXME: Remove filteredUsers when create services
+      filteredUsers: [...Array(10).keys()].map((id) => {
+        return {
+          id: id,
+          firstName: "Ignacio" + id,
+          lastName: "Rueda",
+        };
+      }),
       ingredients: [...Array(15).keys()].map((id) => {
         return {
           id: id,
