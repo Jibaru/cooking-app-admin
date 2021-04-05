@@ -12,7 +12,7 @@
 </template>
 <script>
 import { mapActions, mapGetters } from "vuex";
-import MultipleFinderInput from "../../../form-element/MultipleFinderInput";
+import MultipleFinderInput from "@/components/form-element/MultipleFinderInput";
 
 export default {
   emits: ["update:modelValue"],
