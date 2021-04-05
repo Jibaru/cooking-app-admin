@@ -31,9 +31,9 @@
   </base-modal>
 </template>
 <script>
-import NotificationsFilter from "../../../components/notification/list/filter/NotificationsFilter";
-import NotificationsTable from "../../../components/notification/list/table/NotificationsTable";
-import CreateNotificationForm from "../../../components/notification/forms/CreateNotificationForm";
+import NotificationsFilter from "@/components/app/notification/list/filter/NotificationsFilter";
+import NotificationsTable from "@/components/app/notification/list/table/NotificationsTable";
+import CreateNotificationForm from "@/components/app/notification/forms/CreateNotificationForm";
 
 export default {
   components: {

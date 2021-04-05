@@ -29,9 +29,9 @@
   </base-modal>
 </template>
 <script>
-import UsersFilter from "../../../components/user/list/filter/UsersFilter";
-import UsersTable from "../../../components/user/list/table/UsersTable";
-import CreateUserForm from "../../../components/user/forms/CreateUserForm";
+import UsersFilter from "@/components/app/user/list/filter/UsersFilter";
+import UsersTable from "@/components/app/user/list/table/UsersTable";
+import CreateUserForm from "@/components/app/user/forms/CreateUserForm";
 
 export default {
   components: {

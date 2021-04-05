@@ -29,9 +29,9 @@
   </base-modal>
 </template>
 <script>
-import NutrientsFilter from "../../../components/nutrient/list/filter/NutrientsFilter";
-import NutrientsTable from "../../../components/nutrient/list/table/NutrientsTable";
-import CreateNutrientForm from "../../../components/nutrient/forms/CreateNutrientForm";
+import NutrientsFilter from "@/components/app/nutrient/list/filter/NutrientsFilter";
+import NutrientsTable from "@/components/app/nutrient/list/table/NutrientsTable";
+import CreateNutrientForm from "@/components/app/nutrient/forms/CreateNutrientForm";
 
 export default {
   components: {
