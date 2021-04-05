@@ -2,7 +2,7 @@
   <aside>
     <ul>
       <li v-for="link in sidebarLinks" :key="link.name">
-        <router-link :to="link.path">
+        <router-link :to="link.path" :class="buildClasses(link)">
           <span>{{ link.name }}</span>
           <base-icon :prefix="link.icon.prefix" :icon="link.icon.name" />
         </router-link>
@@ -18,6 +18,13 @@ export default {
     ...mapGetters({
       sidebarLinks: "navigation/sidebarLinks",
     }),
+  },
+  methods: {
+    buildClasses(link) {
+      return {
+        "selected-link": link.path === this.$route.path,
+      };
+    },
   },
 };
 </script>
@@ -44,10 +51,14 @@ aside {
       text-decoration: none;
 
       &:hover {
-        background-color: $app-primary-color;
         opacity: 1;
       }
     }
   }
+}
+
+.selected-link {
+  background-color: $app-primary-color;
+  opacity: 1;
 }
 </style>
