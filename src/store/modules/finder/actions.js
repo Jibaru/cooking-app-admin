@@ -8,4 +8,14 @@ export default {
 
     context.commit("setFilteredIngredients", { findedIngredients });
   },
+  async findUsers(context, { value }) {
+    // TODO: find users
+
+    const findedUsers = context.getters.users.filter(
+      (option) =>
+        option.firstName.includes(value) || option.lastName.includes(value)
+    );
+
+    context.commit("setFilteredUsers", { findedUsers });
+  },
 };
