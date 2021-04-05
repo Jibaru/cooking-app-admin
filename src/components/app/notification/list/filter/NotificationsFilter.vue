@@ -37,7 +37,7 @@
 </template>
 <script>
 import { mapActions, mapGetters } from "vuex";
-import SingleFinderInput from "../../../form-element/SingleFinderInput";
+import SingleFinderInput from "@/components/form-element/SingleFinderInput";
 
 export default {
   emits: ["filter"],
