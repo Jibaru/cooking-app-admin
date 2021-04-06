@@ -42,9 +42,6 @@ export default {
       this.$emit("update:modelValue", options);
     },
   },
-  mounted() {
-    this.myOptions = this.options;
-  },
 };
 </script>
 <style lang="scss" scoped>
