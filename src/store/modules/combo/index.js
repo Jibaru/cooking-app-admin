@@ -29,6 +29,24 @@ export default {
       ingredientStates: [],
       equipmentStates: [],
       recipeStates: [],
+      regions: [
+        {
+          value: "NORTH_AMERICA",
+          name: "Norteamérica",
+        },
+        {
+          value: "CENTRAL_AMERICA",
+          name: "Centroamérica",
+        },
+        {
+          value: "SOUTH_AMERICA",
+          name: "Sudámerica",
+        },
+        {
+          value: "EUROPE",
+          name: "Europa",
+        },
+      ],
     };
   },
   mutations,
