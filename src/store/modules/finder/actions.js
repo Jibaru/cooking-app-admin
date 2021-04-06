@@ -18,4 +18,13 @@ export default {
 
     context.commit("setFilteredUsers", { findedUsers });
   },
+  async findRecipes(context, { value }) {
+    // TODO: find recipes
+
+    const findedRecipes = context.getters.recipes.filter((option) =>
+      option.title.includes(value)
+    );
+
+    context.commit("setFilteredRecipes", { findedRecipes });
+  },
 };
