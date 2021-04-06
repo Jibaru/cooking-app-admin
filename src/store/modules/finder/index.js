@@ -34,6 +34,19 @@ export default {
           name: "Ingredient " + id,
         };
       }),
+      recipes: [...Array(15).keys()].map((id) => {
+        return {
+          id: id,
+          title: "Recipe " + id,
+        };
+      }),
+      // FIXME: Remove filteredRecipes when create services
+      filteredRecipes: [...Array(15).keys()].map((id) => {
+        return {
+          id: id,
+          title: "Recipe " + id,
+        };
+      }),
     };
   },
   mutations,
