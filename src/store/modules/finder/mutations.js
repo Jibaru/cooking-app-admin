@@ -11,4 +11,10 @@ export default {
   setFilteredUsers(state, { findedUsers }) {
     state.filteredUsers = findedUsers;
   },
+  setRecipes(state, { recipes }) {
+    state.recipes = recipes;
+  },
+  setFilteredRecipes(state, { findedRecipes }) {
+    state.filteredRecipes = findedRecipes;
+  },
 };
