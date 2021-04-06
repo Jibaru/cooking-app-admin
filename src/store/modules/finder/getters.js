@@ -19,4 +19,14 @@ export default {
       };
     });
   },
+  recipes: (state) => state.recipes,
+  recipeValues(state) {
+    // FIXME: Change filteredRecipes to recipes when create services
+    return state.filteredRecipes.map((recipe) => {
+      return {
+        key: recipe.id,
+        value: recipe.title,
+      };
+    });
+  },
 };
