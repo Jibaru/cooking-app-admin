@@ -1,6 +1,11 @@
 <template>
   <section>
     <h1>{{ nutrientName }}</h1>
+    <div>
+      <p>
+        <b>Creado el:</b> <base-badge>{{ nutrientCreatedAt }}</base-badge>
+      </p>
+    </div>
     <h2>Ingredientes que lo poseen</h2>
     <base-simple-list
       :elements="ingredientNames"
@@ -20,9 +25,14 @@ export default {
       type: String,
       required: true,
     },
+    nutrientCreatedAt: {
+      type: String,
+      required: true,
+    },
   },
   data() {
     return {
+      // FIXME: Change to fetch data with nutrientId
       ingredientNames: [...Array(11).keys()].map((id) => {
         return "Ingredient " + id;
       }),
@@ -44,6 +54,17 @@ section {
   h2 {
     font-weight: 600;
     font-size: 1rem;
+  }
+
+  p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    b {
+      font-weight: bold;
+    }
   }
 }
 </style>
