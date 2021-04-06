@@ -3,6 +3,7 @@
     <template #head>
       <base-cell tag="th">ID</base-cell>
       <base-cell tag="th">Nombre</base-cell>
+      <base-cell tag="th">Fecha Creación</base-cell>
       <base-cell tag="th">Acciones</base-cell>
     </template>
     <template #body>
@@ -16,6 +17,11 @@
         </base-cell>
         <base-cell tag="td">
           {{ nutrient.name }}
+        </base-cell>
+        <base-cell tag="td">
+          <base-badge>
+            {{ nutrient.createdAt }}
+          </base-badge>
         </base-cell>
         <base-cell tag="td">
           <base-button
@@ -57,6 +63,7 @@
     <nutrient-presentation
       :nutrient-id="selectedNutrient.id"
       :nutrient-name="selectedNutrient.name"
+      :nutrient-created-at="selectedNutrient.createdAt"
     />
   </base-modal>
   <base-modal
@@ -87,6 +94,7 @@ export default {
       selectedNutrient: {
         id: null,
         name: null,
+        createdAt: null,
       },
       isPopoverOpen: false,
       isNutrientPresentationModalOpen: false,
