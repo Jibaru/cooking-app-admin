@@ -10,6 +10,7 @@ export default {
         return {
           id: id,
           name: "Nutrient" + id,
+          createdAt: "2015-12-06",
         };
       }),
       currentPage: 1,
