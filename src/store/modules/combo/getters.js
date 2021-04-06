@@ -4,4 +4,5 @@ export default {
   ingredientStates: (state) => state.ingredientStates,
   equipmentStates: (state) => state.equipmentStates,
   recipeStates: (state) => state.recipeStates,
+  regions: (state) => state.regions,
 };
