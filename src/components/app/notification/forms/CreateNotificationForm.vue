@@ -12,11 +12,11 @@
       </div>
       <div class="form-group col-12 col-sm-12 col-md-8 col-lg-9">
         <label>Usuario</label>
-        <base-select v-model="userId.val" :disabled="hasReceiverUserIdSetted">
-          <base-option v-for="user in users" :key="user.id" :value="user.id">
-            {{ user.firstName + " " + user.lastName }}
-          </base-option>
-        </base-select>
+        <single-finder-input
+          v-model="user.val"
+          :options="userValues"
+          @input="filterUsers"
+        />
       </div>
       <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12">
         <label>Motivo</label>
@@ -44,11 +44,15 @@
   </form>
 </template>
 <script>
-import { mapGetters } from "vuex";
+import { mapActions, mapGetters } from "vuex";
+import SingleFinderInput from "@/components/form-element/SingleFinderInput";
 import Validators from "@/utils/validators";
 
 export default {
   emits: ["submit-create"],
+  components: {
+    SingleFinderInput,
+  },
   props: {
     receiverUserId: {
       type: Number,
@@ -57,8 +61,8 @@ export default {
   },
   data() {
     return {
-      userId: {
-        val: "",
+      user: {
+        val: null,
         isValid: true,
       },
       dateTimeSended: {
@@ -77,16 +81,17 @@ export default {
   },
   computed: {
     ...mapGetters({
-      users: "finder/users",
+      userValues: "finder/userValues",
     }),
     isValidForm() {
       return (
-        this.userId.isValid &&
+        this.user.isValid &&
         this.dateTimeSended.isValid &&
         this.subject.isValid &&
         this.content.isValid
       );
     },
+    // TODO: Set to 'disabled' the SingleFinderInput if this computed attr is true
     hasReceiverUserIdSetted() {
       return (
         this.receiverUserId !== null &&
@@ -95,22 +100,35 @@ export default {
       );
     },
   },
+  watch: {
+    receiverUserId(userId) {
+      this.setUserValue(userId);
+    },
+  },
   methods: {
     ...{
       isEmpty: Validators.isEmpty,
     },
-    initializeDefaultSelectValues() {
-      if (this.users) {
-        this.userId.val = this.receiverUserId
-          ? this.receiverUserId
-          : this.users[0].id;
+    ...mapActions({
+      findUsers: "finder/findUsers",
+    }),
+    filterUsers(value) {
+      this.findUsers({ value });
+    },
+    setUserValue(userId) {
+      if (this.hasReceiverUserIdSetted) {
+        const userValue = this.userValues.find(
+          (userValue) => userValue.key === userId
+        );
+        this.user.val = { ...userValue };
       }
     },
     validateUser() {
-      this.userId.isValid =
-        !this.isEmpty(this.userId.val) &&
-        !!this.users &&
-        this.users.map((user) => user.id).indexOf(this.userId.val) !== -1;
+      this.user.isValid =
+        this.user.val !== null &&
+        !!this.userValues &&
+        this.userValues.map((user) => user.key).indexOf(this.user.val.key) !==
+          -1;
     },
     validateDateTimeSended() {
       this.dateTimeSended.isValid = !this.isEmpty(this.dateTimeSended.val);
@@ -129,13 +147,14 @@ export default {
     },
     submitForm() {
       this.validateFields();
+      console.log(this.user, this.userValues);
 
       if (!this.isValidForm) {
         return;
       }
 
       this.$emit("submit-create", {
-        userId: this.userId.val,
+        userId: this.user.val.key,
         dateTimeSended: this.dateTimeSended.val,
         subject: this.subject.val,
         content: this.content.val,
@@ -143,7 +162,10 @@ export default {
     },
   },
   mounted() {
-    this.initializeDefaultSelectValues();
+    this.setUserValue(this.receiverUserId);
+  },
+  unmounted() {
+    this.findUsers({ value: "" });
   },
 };
 </script>
