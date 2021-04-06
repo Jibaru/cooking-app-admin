@@ -5,6 +5,7 @@ import finderModule from "./modules/finder/index";
 import navigationModule from "./modules/navigation/index";
 import notificationModule from "./modules/notification/index";
 import nutrientModule from "./modules/nutrient/index";
+import recipeTagModule from "./modules/recipe-tag/index";
 import userModule from "./modules/user/index";
 
 const store = createStore({
@@ -14,6 +15,7 @@ const store = createStore({
     navigation: navigationModule,
     notification: notificationModule,
     nutrient: nutrientModule,
+    recipeTag: recipeTagModule,
     user: userModule,
   },
 });
