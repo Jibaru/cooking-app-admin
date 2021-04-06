@@ -28,6 +28,7 @@ export default {
     },
     currentName: {
       type: String,
+      default: "",
     },
   },
   data() {
