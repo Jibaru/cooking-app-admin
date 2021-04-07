@@ -68,7 +68,7 @@
           :open="isOpenPrefRecipesModal"
           @close="togglePrefRecipesModal"
         >
-          <pref-recipes
+          <users-recipe-count-filter
             :minRecipesCreated="prefRecipes.recipesCreated.min"
             :maxRecipesCreated="prefRecipes.recipesCreated.max"
             :minRecipesFavorite="prefRecipes.recipesFavorite.min"
@@ -93,12 +93,12 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-import PrefRecipes from "./PrefsRecipes";
+import UsersRecipeCountFilter from "./UsersRecipeCountFilter";
 
 export default {
   emits: ["filter"],
   components: {
-    PrefRecipes,
+    UsersRecipeCountFilter,
   },
   data() {
     return {
