@@ -60,6 +60,19 @@ export default {
           name: "Nutrient " + id,
         };
       }),
+      ingredientCategories: [...Array(15).keys()].map((id) => {
+        return {
+          id: id,
+          name: "Ingredient Category " + id,
+        };
+      }),
+      // FIXME: Remove filteredIngredientCategories when create services
+      filteredIngredientCategories: [...Array(15).keys()].map((id) => {
+        return {
+          id: id,
+          name: "Ingredient Category " + id,
+        };
+      }),
     };
   },
   mutations,
