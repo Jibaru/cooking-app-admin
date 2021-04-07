@@ -26,7 +26,16 @@ export default {
           name: "Baneado",
         },
       ],
-      ingredientStates: [],
+      ingredientStates: [
+        {
+          value: "APPROVED",
+          name: "Aprobado",
+        },
+        {
+          value: "DENIED",
+          name: "Denegado",
+        },
+      ],
       equipmentStates: [],
       recipeStates: [],
       regions: [
