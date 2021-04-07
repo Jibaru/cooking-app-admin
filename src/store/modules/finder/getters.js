@@ -39,4 +39,14 @@ export default {
       };
     });
   },
+  ingredientCategories: (state) => state.ingredientCategories,
+  ingredientCategoryValues(state) {
+    // FIXME: Change filteredIngredientCategories to ingredientCategories when create services
+    return state.filteredIngredientCategories.map((ingredientCategory) => {
+      return {
+        key: ingredientCategory.id,
+        value: ingredientCategory.name,
+      };
+    });
+  },
 };
