@@ -1,5 +1,5 @@
 <template>
-  <span :class="badgeClasses">
+  <span class="base-badge" :class="badgeClasses">
     <slot></slot>
   </span>
 </template>
@@ -25,7 +25,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-span {
+.base-badge {
   @include low-shadow;
   padding: 0.3rem;
   border-radius: 5px;
