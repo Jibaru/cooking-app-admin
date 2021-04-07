@@ -47,6 +47,19 @@ export default {
           title: "Recipe " + id,
         };
       }),
+      nutrients: [...Array(15).keys()].map((id) => {
+        return {
+          id: id,
+          name: "Nutrient " + id,
+        };
+      }),
+      // FIXME: Remove filteredNutrients when create services
+      filteredNutrients: [...Array(15).keys()].map((id) => {
+        return {
+          id: id,
+          name: "Nutrient " + id,
+        };
+      }),
     };
   },
   mutations,
