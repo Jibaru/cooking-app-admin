@@ -27,4 +27,13 @@ export default {
 
     context.commit("setFilteredRecipes", { findedRecipes });
   },
+  async findNutrients(context, { value }) {
+    // TODO: find nutrients
+
+    const findedNutrients = context.getters.nutrients.filter((option) =>
+      option.name.includes(value)
+    );
+
+    context.commit("setFilteredNutrients", { findedNutrients });
+  },
 };
