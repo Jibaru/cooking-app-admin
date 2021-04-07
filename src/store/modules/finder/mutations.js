@@ -17,4 +17,10 @@ export default {
   setFilteredRecipes(state, { findedRecipes }) {
     state.filteredRecipes = findedRecipes;
   },
+  setNutrients(state, { nutrients }) {
+    state.nutrients = nutrients;
+  },
+  setFilteredNutrients(state, { findedNutrients }) {
+    state.filteredNutrients = findedNutrients;
+  },
 };
