@@ -39,7 +39,8 @@ export default {
 <style lang="scss" scoped>
 button {
   @include low-shadow;
-  height: 2rem;
+  height: fit-content;
+  min-height: 2rem;
   border-radius: 2px;
   border: 0;
   cursor: pointer;
