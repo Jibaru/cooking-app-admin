@@ -23,4 +23,10 @@ export default {
   setFilteredNutrients(state, { findedNutrients }) {
     state.filteredNutrients = findedNutrients;
   },
+  setIngredientCategories(state, { ingredientCategories }) {
+    state.ingredientCategories = ingredientCategories;
+  },
+  setFilteredIngredientCategories(state, { findedIngredientCategories }) {
+    state.filteredIngredientCategories = findedIngredientCategories;
+  },
 };
