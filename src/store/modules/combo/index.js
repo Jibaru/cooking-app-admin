@@ -47,6 +47,16 @@ export default {
           name: "Europa",
         },
       ],
+      mimeTypes: [
+        {
+          value: "image/jpeg",
+          name: "JPEG",
+        },
+        {
+          value: "image/png",
+          name: "PNG",
+        },
+      ],
     };
   },
   mutations,
