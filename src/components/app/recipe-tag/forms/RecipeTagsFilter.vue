@@ -51,7 +51,7 @@
   </form>
 </template>
 <script>
-import PrefsRecipes from "../../../recipe/forms/PrefsRecipes";
+import PrefsRecipes from "../../recipe/forms/PrefsRecipes";
 
 export default {
   emits: ["filter"],

@@ -81,8 +81,8 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-import RecipeTagPresentation from "../../presentations/RecipeTagPresentation";
-import DeleteRecipeTagForm from "../../forms/DeleteRecipeTagForm";
+import RecipeTagPresentation from "../presentations/RecipeTagPresentation";
+import DeleteRecipeTagForm from "../forms/DeleteRecipeTagForm";
 
 export default {
   components: {

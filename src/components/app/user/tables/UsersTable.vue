@@ -150,11 +150,11 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-import UserPresentation from "../../presentations/UserPresentation";
-import CreateUserForm from "../../forms/CreateUserForm";
-import ChangeStateForm from "../../forms/ChangeStateForm";
-import ChangePasswordForm from "../../forms/ChangePasswordForm";
-import CreateNotificationForm from "../../../notification/forms/CreateNotificationForm";
+import UserPresentation from "../presentations/UserPresentation";
+import CreateUserForm from "../forms/CreateUserForm";
+import ChangeStateForm from "../forms/ChangeStateForm";
+import ChangePasswordForm from "../forms/ChangePasswordForm";
+import CreateNotificationForm from "../../notification/forms/CreateNotificationForm";
 
 export default {
   components: {

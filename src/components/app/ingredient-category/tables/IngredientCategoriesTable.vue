@@ -100,9 +100,9 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-import IngredientCategoryPresentation from "../../presentations/IngredientCategoryPresentation";
-import CreateIngredientCategoryForm from "../../forms/CreateIngredientCategoryForm";
-import DeleteIngredientCategoryForm from "../../forms/DeleteIngredientCategoryForm";
+import IngredientCategoryPresentation from "../presentations/IngredientCategoryPresentation";
+import CreateIngredientCategoryForm from "../forms/CreateIngredientCategoryForm";
+import DeleteIngredientCategoryForm from "../forms/DeleteIngredientCategoryForm";
 
 export default {
   components: {

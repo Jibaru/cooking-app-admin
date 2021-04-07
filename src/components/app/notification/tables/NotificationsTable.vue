@@ -108,8 +108,8 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-import NotificationPresentation from "../../presentations/NotificationPresentation";
-import DeleteNotificationForm from "../../forms/DeleteNotificationForm";
+import NotificationPresentation from "../presentations/NotificationPresentation";
+import DeleteNotificationForm from "../forms/DeleteNotificationForm";
 
 export default {
   components: {

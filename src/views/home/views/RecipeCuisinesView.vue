@@ -31,8 +31,8 @@
   </base-modal>
 </template>
 <script>
-import RecipeCuisinesFilter from "@/components/app/recipe-cuisine/list/filter/RecipeCuisinesFilter";
-import RecipeCuisinesTable from "@/components/app/recipe-cuisine/list/table/RecipeCuisinesTable";
+import RecipeCuisinesFilter from "@/components/app/recipe-cuisine/forms/RecipeCuisinesFilter";
+import RecipeCuisinesTable from "@/components/app/recipe-cuisine/tables/RecipeCuisinesTable";
 import CreateRecipeCuisineForm from "@/components/app/recipe-cuisine/forms/CreateRecipeCuisineForm";
 
 export default {

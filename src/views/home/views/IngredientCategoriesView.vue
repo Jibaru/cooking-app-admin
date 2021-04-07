@@ -31,8 +31,8 @@
   </base-modal>
 </template>
 <script>
-import IngredientCategoriesFilter from "@/components/app/ingredient-category/list/filter/IngredientCategoriesFilter";
-import IngredientCategoriesTable from "@/components/app/ingredient-category/list/table/IngredientCategoriesTable";
+import IngredientCategoriesFilter from "@/components/app/ingredient-category/forms/IngredientCategoriesFilter";
+import IngredientCategoriesTable from "@/components/app/ingredient-category/tables/IngredientCategoriesTable";
 import CreateIngredientCategoryForm from "@/components/app/ingredient-category/forms/CreateIngredientCategoryForm";
 
 export default {

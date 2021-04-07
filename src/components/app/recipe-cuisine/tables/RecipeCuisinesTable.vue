@@ -90,8 +90,8 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-import RecipeCuisinePresentation from "../../presentations/RecipeCuisinePresentation";
-import DeleteRecipeCuisineForm from "../../forms/DeleteRecipeCuisineForm";
+import RecipeCuisinePresentation from "../presentations/RecipeCuisinePresentation";
+import DeleteRecipeCuisineForm from "../forms/DeleteRecipeCuisineForm";
 
 export default {
   components: {

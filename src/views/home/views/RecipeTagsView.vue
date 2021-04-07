@@ -29,8 +29,8 @@
   </base-modal>
 </template>
 <script>
-import RecipeTagsFilter from "@/components/app/recipe-tag/list/filter/RecipeTagsFilter";
-import RecipeTagsTable from "@/components/app/recipe-tag/list/table/RecipeTagsTable";
+import RecipeTagsFilter from "@/components/app/recipe-tag/forms/RecipeTagsFilter";
+import RecipeTagsTable from "@/components/app/recipe-tag/tables/RecipeTagsTable";
 import CreateRecipeTagForm from "@/components/app/recipe-tag/forms/CreateRecipeTagForm";
 
 export default {

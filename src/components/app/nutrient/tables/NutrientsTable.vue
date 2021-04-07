@@ -81,8 +81,8 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-import NutrientPresentation from "../../presentations/NutrientPresentation";
-import CreateNutrientForm from "../../forms/CreateNutrientForm";
+import NutrientPresentation from "../presentations/NutrientPresentation";
+import CreateNutrientForm from "../forms/CreateNutrientForm";
 
 export default {
   components: {
