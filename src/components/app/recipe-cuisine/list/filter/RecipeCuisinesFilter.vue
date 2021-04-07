@@ -67,7 +67,7 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-import PrefsRecipes from "../../../recipe-tag/list/filter/PrefsRecipes";
+import PrefsRecipes from "../../../recipe/forms/PrefsRecipes";
 
 export default {
   emits: ["filter"],
