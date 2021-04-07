@@ -29,4 +29,14 @@ export default {
       };
     });
   },
+  nutrients: (state) => state.nutrients,
+  nutrientValues(state) {
+    // FIXME: Change filteredNutrients to nutrients when create services
+    return state.filteredNutrients.map((nutrient) => {
+      return {
+        key: nutrient.id,
+        value: nutrient.name,
+      };
+    });
+  },
 };
