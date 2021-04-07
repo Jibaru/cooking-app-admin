@@ -5,4 +5,5 @@ export default {
   equipmentStates: (state) => state.equipmentStates,
   recipeStates: (state) => state.recipeStates,
   regions: (state) => state.regions,
+  mimeTypes: (state) => state.mimeTypes,
 };
