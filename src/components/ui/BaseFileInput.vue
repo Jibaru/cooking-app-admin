@@ -19,6 +19,11 @@
       @input="changeModelValue"
       ref="input-tag"
     />
+    <div class="error" v-if="!isValid">
+      <slot name="error">
+        <span>El campo es inválido</span>
+      </slot>
+    </div>
   </div>
 </template>
 <script>
@@ -32,6 +37,10 @@ export default {
     previousSrc: {
       type: String,
       required: false,
+    },
+    isValid: {
+      type: Boolean,
+      default: true,
     },
   },
   emits: ["update:modelValue"],
@@ -83,5 +92,11 @@ img {
 
 input {
   display: none;
+}
+
+.error {
+  color: $app-danger-color;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
 }
 </style>
