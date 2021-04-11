@@ -2,6 +2,11 @@
   <select :value="modelValue" @input="changeModelValue($event)">
     <slot></slot>
   </select>
+  <div class="error" v-if="!isValid">
+    <slot name="error">
+      <span>El campo es inválido</span>
+    </slot>
+  </div>
 </template>
 <script>
 export default {
@@ -9,6 +14,10 @@ export default {
   props: {
     modelValue: {
       type: [String, Number],
+    },
+    isValid: {
+      type: Boolean,
+      default: true,
     },
   },
   methods: {
@@ -31,5 +40,11 @@ select {
     outline-color: $app-primary-color;
     outline-style: solid;
   }
+}
+
+.error {
+  color: $app-danger-color;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
 }
 </style>
