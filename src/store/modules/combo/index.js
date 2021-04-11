@@ -66,6 +66,13 @@ export default {
           name: "PNG",
         },
       ],
+      units: [
+        { value: "kg", name: "KG" },
+        { value: "mg", name: "Mg" },
+        { value: "lt", name: "Litros" },
+        { value: "gr", name: "Gramos" },
+        { value: "tz", name: "Tazas" },
+      ],
     };
   },
   mutations,
