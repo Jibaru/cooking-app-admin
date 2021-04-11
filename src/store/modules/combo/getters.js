@@ -6,4 +6,5 @@ export default {
   recipeStates: (state) => state.recipeStates,
   regions: (state) => state.regions,
   mimeTypes: (state) => state.mimeTypes,
+  units: (state) => state.units,
 };
