@@ -6,6 +6,7 @@
     :bind="$attrs"
     @blur="focusOut"
     @focus="focusIn"
+    step="any"
   />
   <div class="error" v-if="!isValid">
     <slot name="error">
@@ -35,7 +36,13 @@ export default {
   },
   methods: {
     changeModelValue(event) {
-      this.$emit("update:modelValue", event.target.value);
+      let value = event.target.value;
+
+      if (this.type === "number") {
+        value = Number(value);
+      }
+
+      this.$emit("update:modelValue", value);
     },
     focusOut(event) {
       this.$emit("blur", event);
