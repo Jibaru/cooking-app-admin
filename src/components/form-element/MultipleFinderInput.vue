@@ -3,6 +3,7 @@
     @update:modelValue="addSelectedOption"
     @input="handleInput"
     :options="unselectedOptions"
+    :is-valid="isValid"
   />
   <ul v-if="modelValue">
     <li v-for="(option, index) in modelValue" :key="option.key">
@@ -33,6 +34,10 @@ export default {
       type: String,
       required: false,
       default: "primary",
+    },
+    isValid: {
+      required: false,
+      default: true,
     },
   },
   computed: {

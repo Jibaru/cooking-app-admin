@@ -8,6 +8,7 @@
     @update:modelValue="updateModelValue"
     @input="handleInput"
     :options="options"
+    :is-valid="isValid"
   />
 </template>
 <script>
@@ -34,6 +35,9 @@ export default {
       type: String,
       required: false,
       default: "primary",
+    },
+    isValid: {
+      type: Boolean,
     },
   },
   computed: {

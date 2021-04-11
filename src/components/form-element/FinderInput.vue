@@ -5,6 +5,7 @@
       @update:modelValue="emitInput"
       @focus="showOptions"
       @blur="hideOptions"
+      :is-valid="isOptionsVisible || isValid"
     />
     <ul v-show="isOptionsVisible">
       <li
@@ -32,6 +33,10 @@ export default {
      */
     options: {
       type: Array,
+    },
+    isValid: {
+      type: Boolean,
+      default: true,
     },
   },
   data() {
