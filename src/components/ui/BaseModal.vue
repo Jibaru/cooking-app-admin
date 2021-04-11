@@ -62,6 +62,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+$top-modal: 2rem;
+$bottom-modal: 2rem;
+
 #backdrop {
   position: fixed;
   top: 0;
@@ -75,14 +78,15 @@ export default {
 dialog {
   @include low-shadow;
   position: fixed;
-  top: 2rem;
+  top: $top-modal;
   width: 80%;
+  max-height: calc(100vh - #{$top-modal} - #{$bottom-modal});
   z-index: 100;
   border-radius: 2px;
   border: none;
   padding: 1rem;
   margin: 0 auto;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 header {
