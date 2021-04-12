@@ -1,7 +1,7 @@
 import RegExpValues from "./regexp";
 
 const Validators = {
-  isEmpty: (value) => value === "",
+  isEmpty: (value) => value === undefined || value === null || value === "",
   isEmail: (value) => RegExpValues.VALID_EMAIL.test(value),
 };
 
