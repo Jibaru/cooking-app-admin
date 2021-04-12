@@ -1,5 +1,5 @@
 <template>
-  <form class="multiple-finder">
+  <form class="multiple-finder" :style="formStyles">
     <label>Prefs. Categorías de Ingrediente</label>
     <multiple-finder-input
       :modelValue="modelValue"
@@ -7,6 +7,7 @@
       @input="filterOptions"
       :options="ingredientCategories"
       chip-color="success"
+      :is-valid="isValid"
     />
   </form>
 </template>
@@ -25,11 +26,24 @@ export default {
       default: null,
       validator: (val) => val === null || typeof val === "object",
     },
+    isValid: {
+      type: Boolean,
+      default: true,
+    },
+    minHeight: {
+      type: String,
+      required: false,
+    },
   },
   computed: {
     ...mapGetters({
       ingredientCategories: "finder/ingredientCategoryValues",
     }),
+    formStyles() {
+      return {
+        "min-height": this.minHeight,
+      };
+    },
   },
   methods: {
     ...mapActions({
@@ -44,8 +58,3 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-.multiple-finder {
-  min-height: 300px;
-}
-</style>
