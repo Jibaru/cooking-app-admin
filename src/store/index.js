@@ -1,6 +1,7 @@
 import { createStore } from "vuex";
 
 import comboModule from "./modules/combo/index";
+import equipmentModule from "./modules/equipment/index";
 import fileDataModule from "./modules/file-data/index";
 import finderModule from "./modules/finder/index";
 import ingredientModule from "./modules/ingredient/index";
@@ -15,6 +16,7 @@ import userModule from "./modules/user/index";
 const store = createStore({
   modules: {
     combo: comboModule,
+    equipment: equipmentModule,
     fileData: fileDataModule,
     finder: finderModule,
     ingredient: ingredientModule,
