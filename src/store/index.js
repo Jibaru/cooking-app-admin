@@ -3,6 +3,7 @@ import { createStore } from "vuex";
 import comboModule from "./modules/combo/index";
 import fileDataModule from "./modules/file-data/index";
 import finderModule from "./modules/finder/index";
+import ingredientModule from "./modules/ingredient/index";
 import ingredientCategoryModule from "./modules/ingredient-category/index";
 import navigationModule from "./modules/navigation/index";
 import notificationModule from "./modules/notification/index";
@@ -16,6 +17,7 @@ const store = createStore({
     combo: comboModule,
     fileData: fileDataModule,
     finder: finderModule,
+    ingredient: ingredientModule,
     ingredientCategory: ingredientCategoryModule,
     navigation: navigationModule,
     notification: notificationModule,
