@@ -5,7 +5,7 @@
       <base-cell tag="th">Nutriente</base-cell>
       <base-cell tag="th">Cantidad</base-cell>
       <base-cell tag="th">Unidad</base-cell>
-      <base-cell tag="th">Acciones</base-cell>
+      <base-cell tag="th" v-if="!hideActions">Acciones</base-cell>
     </template>
     <template #body>
       <tr
@@ -27,7 +27,7 @@
             {{ nutritionalInformation.unit }}
           </base-badge>
         </base-cell>
-        <base-cell tag="td">
+        <base-cell tag="td" v-if="!hideActions">
           <base-button
             type="button"
             color="danger"
@@ -47,6 +47,10 @@ export default {
     modelValue: {
       type: Array,
       required: true,
+    },
+    hideActions: {
+      type: Boolean,
+      default: false,
     },
   },
   methods: {
