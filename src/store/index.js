@@ -11,6 +11,7 @@ import notificationModule from "./modules/notification/index";
 import nutrientModule from "./modules/nutrient/index";
 import recipeCuisineModule from "./modules/recipe-cuisine/index";
 import recipeTagModule from "./modules/recipe-tag/index";
+import recipeTypeModule from "./modules/recipe-type/index";
 import userModule from "./modules/user/index";
 
 const store = createStore({
@@ -26,6 +27,7 @@ const store = createStore({
     nutrient: nutrientModule,
     recipeCuisine: recipeCuisineModule,
     recipeTag: recipeTagModule,
+    recipeType: recipeTypeModule,
     user: userModule,
   },
 });
