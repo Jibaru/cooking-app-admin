@@ -103,7 +103,7 @@ export default {
 
       this.$emit(eventName, {
         ...(this.isEditingIngredientCategory && {
-          nutrientId: this.currentId,
+          ingredientCategoryId: this.currentId,
         }),
         name: this.name.val,
         description: this.description.val,
