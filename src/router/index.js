@@ -12,6 +12,7 @@ import NutrientsView from "../views/home/views/NutrientsView";
 import RecipeCuisinesView from "../views/home/views/RecipeCuisinesView";
 import RecipesView from "../views/home/views/RecipesView";
 import RecipeTagsView from "../views/home/views/RecipeTagsView";
+import RecipeTypesView from "../views/home/views/RecipeTypesView";
 import UsersView from "../views/home/views/UsersView";
 
 const APP_ROUTES = [
@@ -136,6 +137,19 @@ const APP_ROUTES = [
           icon: {
             prefix: "fas",
             name: "tags",
+          },
+        },
+      },
+      {
+        name: "RecipeTypes",
+        appName: "Tipos de Recetas",
+        path: "/tipos-recetas",
+        component: RecipeTypesView,
+        meta: {
+          inSidebar: true,
+          icon: {
+            prefix: "fas",
+            name: "pizza-slice",
           },
         },
       },
